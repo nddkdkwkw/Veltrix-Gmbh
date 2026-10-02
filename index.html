@@ -367,6 +367,27 @@ footer p {
     }
 }
 
+
+const projektButton = document.getElementById("projektButton");
+const kontaktButton = document.getElementById("kontaktButton");
+
+projektButton.addEventListener("click", function () {
+    document.getElementById("projekte").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+});
+
+kontaktButton.addEventListener("click", function () {
+    document.getElementById("kontakt").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+});
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
   <a href="https://www.google.com">Veltrix-Gmbh</a>
 </body>
 </html>
