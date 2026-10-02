@@ -107,6 +107,266 @@
 </body>
 </html>
 
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: #080B14;
+    color: #F5F7FF;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 8%;
+    background: #080B14EE;
+    border-bottom: 1px solid #FFFFFF12;
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span,
+.hero h1 span {
+    color: #A78BFA;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #B7BED0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #A78BFA;
+}
+
+.hero {
+    min-height: 85vh;
+    padding: 130px 8% 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background:
+        radial-gradient(ellipse at 75% 25%, #5632A52A, transparent 45%),
+        #080B14;
+}
+
+.eyebrow {
+    color: #A78BFA;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(44px, 8vw, 88px);
+    line-height: 1.08;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+}
+
+.intro {
+    max-width: 560px;
+    color: #B7BED0;
+    font-size: 18px;
+    margin-bottom: 32px;
+}
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    background: linear-gradient(135deg, #8B5CF6, #5B45DB);
+    color: white;
+    text-decoration: none;
+    border: 1px solid #FFFFFF20;
+    border-radius: 10px;
+    padding: 15px 24px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 35px #7C3AED40;
+}
+
+.button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #C4B5FD;
+    outline-offset: 4px;
+}
+
+.small-note {
+    color: #777F96;
+    font-size: 12px;
+    margin-top: 22px;
+}
+
+.section {
+    padding: 100px 8%;
+    scroll-margin-top: 80px;
+}
+
+.section h2 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin-bottom: 35px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #111625;
+    border: 1px solid #FFFFFF12;
+    border-radius: 16px;
+    padding: 30px;
+    transition: transform 0.25s, border-color 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #8B5CF666;
+}
+
+.number {
+    color: #A78BFA;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.card h3 {
+    font-size: 21px;
+    margin: 25px 0 12px;
+}
+
+.card p,
+.projects > p:not(.eyebrow),
+.contact > p:not(.eyebrow) {
+    color: #AAB2C5;
+}
+
+.projects {
+    background: #101426;
+}
+
+.projects > p:not(.eyebrow),
+.contact > p:not(.eyebrow) {
+    max-width: 600px;
+    margin-bottom: 28px;
+}
+
+.contact {
+    min-height: 380px;
+}
+
+.secondary {
+    background: transparent;
+    border-color: #8B5CF6;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 30px 8%;
+    border-top: 1px solid #FFFFFF12;
+}
+
+footer p {
+    color: #777F96;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        padding: 18px 5%;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    nav {
+        gap: 16px;
+    }
+
+    .hero {
+        min-height: 75vh;
+        padding: 90px 6%;
+    }
+
+    .hero h1 {
+        letter-spacing: -1.5px;
+    }
+
+    .section {
+        padding: 75px 6%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        padding: 25px 6%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
+
   <a href="https://www.google.com">Veltrix-Gmbh</a>
 </body>
 </html>
